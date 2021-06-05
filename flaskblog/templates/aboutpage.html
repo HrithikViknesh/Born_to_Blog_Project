@@ -1,5 +1,55 @@
 {% extends "layout.html" %}
 
 {%  block custom_content %}
-    <h1> About Page</h1>
+    <h1> About the Site</h1>
+    </b>
+    <div class="container">
+        <p>Born to Blog is a blogging site developed using Flask, HTML, CSS, Sqlite.</p>
+        <div class="row">
+            <div class="column">
+              <img src="https://www.kindpng.com/picc/m/188-1882416_flask-python-logo-hd-png-download.png" alt="Flask" width="130" height="130">
+            </div>
+            
+            <div class="column">
+              <img src="https://p.kindpng.com/picc/s/198-1985015_html-5-svg-hd-png-download.png" alt="HTML CSS" width="160" height="130">
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div class="column">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLw0ZaE3JWWJXPqFLde8mLJxNCt7-3uzTdg&usqp=CAU" alt="Sqlite and Python" width="160" height="130">
+            </div>
+          </div>
+        <p class="article-content">This site was designed to act as a platform that allows multiple contributors from various technical backgrounds to share their ideas and experiences.</p>    
+    </div>
+
+    <div class="article-metadata">
+        <h4>Contributor Account Services</h4>
+        <ul class="bread">
+            <li>Login/Sign Up</li>
+            <li>Creating a new account by providing mail address and an account password.</li>
+            <li>Providing a custom Profile Picture for an account.(optional)</li>
+            <li>Visiting Account Page to display account details.</li>
+            <li>Updating User Information.</li>
+            <li>Forgot Password/Changing Account Credentials through link to mailing address.</li>
+            <li>Remember Me option during login.</li>
+            <li>Viewing Top Contributors on the Blog.(by posts and likes)</li>
+        </ul>
+    </div>
+
+    <div class="article-metadata">
+        <h4>Blog Posts</h4>
+        <ul class="bread">
+            <li>Creating a new post by providing title and content of post.</li>
+            <li>Displaying all Posts in the Blog in batches of pages.(Latest First)</li>
+            <li>Viewing all posts by a particular contributor.</li>
+            <li>Liking a Post</li>
+            <li>Updation/Deletion of a post, by contributor.</li>
+            <li>Viewing Top Posts(by likes) on the Blog.</li>
+            <li>Filtering Posts posted between two given dates.</li>
+        </ul>
+    </div>
+
+    <p class="article-metadata">The QuickLinks can be used to quickly access certain pages.</p>
+
+
+
 {% endblock custom_content %}
