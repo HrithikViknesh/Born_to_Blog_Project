@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block custom_content %}
+	{% for user_post in user_info %}
+		<article class="media content-section">
+      <!-- remember that post.author gives access to entire user object of that post's author -->
+          <img class="rounded-circle article-img" src="{{ url_for('static',filename="profile_pics/" + user_post['user'].image_file) }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{{ url_for('users.user_posts',username=user_post['user'].username) }}">{{ user_post['user'].username }}</a>
+              <p class="article-content" style="float:right"> {{ user_post['user_likes'] }}&#10084;&#65039;</p>
+            </div>        
+            <p class="article-content">Posts: {{ user_post['num_posts'] }}</p>  
+          </div>
+      </article>
+    {% endfor %}
+    <!-- Loop over pages -->
+    {% for page_num in users.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}   <!-- remember () -->
+        {% if page_num %}
+            {% if page_num == users.page %}  <!-- access current page using posts.page since posts is a pagination object -->
+                <a class='btn btn-info mb-4' href="{{ url_for('main.home',page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+                <a class='btn btn-outline-info mb-4' href="{{ url_for('main.home',page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+        {% else %}
+            ...
+        {% endif %}
+    {% endfor %}
+{% endblock custom_content %}
