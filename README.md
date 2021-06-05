@@ -25,7 +25,7 @@ source envname/bin/activate
 <b>3) Install the required packages</b>
 
 ```python
-pip3 install -r reqs.txt
+pip3 install -r requirements.txt
 ```
 
 If required, choose the appropriate python interpreter from source/bin/
