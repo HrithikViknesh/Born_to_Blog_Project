@@ -97,7 +97,7 @@ def display_likes(post_id):
 @posts.route("/post/top_posts")
 def most_liked():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter(Post.likes > 0).order_by(Post.likes_by.desc()).paginate(per_page=4, page=page)
+    posts = Post.query.filter(Post.likes > 0).order_by(Post.likes.desc()).paginate(per_page=4, page=page)
     return render_template("homepage.html", posts=posts)
 
 
