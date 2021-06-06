@@ -5,7 +5,7 @@
 
 * It also requires a python virtual environment.
 
-<h3>Steps to launch the site:</h3>
+<h3>Steps to launch the site(locally):</h3>
 
 <b>1) Create a python virtual environment in the enclosing folder.</b>
 
