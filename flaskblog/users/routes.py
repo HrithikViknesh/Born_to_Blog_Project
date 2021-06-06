@@ -158,6 +158,7 @@ def reset_password(token):
 
 
 @users.route("/view_by_author")
+@login_required
 def view_by_author():
     page = request.args.get('page', 1, type=int)  # Def val is 1
     users = User.query.paginate(per_page=4, page=page)
