@@ -13,6 +13,7 @@
             </div>
             <h2><a class="article-title" href="{{ url_for('posts.post',post_id=post.id) }}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
+            <small style='float:right'>{{ post.likes }}&#10084;&#65039;</small>
           </div>
       </article>
     {% endfor %}
